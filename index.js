@@ -1,11 +1,19 @@
 for(let i=0; i<document.querySelectorAll(".drum").length; i++) {
 
-    document.querySelectorAll(".drum")[i].addEventListener("click", playAudio);
+    document.querySelectorAll(".drum")[i].addEventListener("click", function(){
+        const target=this.innerHTML
+        playAudio(target)
+    });
 
 }
 
-function playAudio() {
-    switch (this.innerHTML) {
+document.addEventListener("keydown", event=>{
+    let target=event.key;
+    playAudio(target);
+});
+
+function playAudio(key) {
+    switch (key) {
         case "w":
             const ton1= new Audio('./sounds/tom-1.mp3');
             ton1.play();
@@ -41,7 +49,7 @@ function playAudio() {
             ton7.play();
             this.style.color='white';        
             break;       
-        default: console.log(this.innerHTML)
+        default: break;
     }
     
 }
