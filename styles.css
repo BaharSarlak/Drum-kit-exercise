@@ -8,13 +8,13 @@ h1 {
   color: #DBEDF3;
   font-family: "Arvo", cursive;
   text-shadow: 3px 0 #DA0463;
-
 } 
 
-footer {
-  color: #DBEDF3;
-  font-family: sans-serif;
-}
+h2 {
+  font-size: 2rem;
+  color: #c8d1d4;
+  font-family: "arial", sans-serif;
+} 
 
 .w {
   background: url('/images/tom1.png');
@@ -45,7 +45,7 @@ footer {
 }
 
 .set {
-  margin: 10% auto;
+  margin: 5% auto;
 }
 
 .game-over {
